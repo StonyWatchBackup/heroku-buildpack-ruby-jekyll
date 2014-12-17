@@ -711,7 +711,7 @@ params = CGI.parse(uri.query || "")
 
   def generate_jekyll_site
     puts "Building jekyll site"
-    pipe("env PATH=$PATH vendor/bundle/ruby/1.9.1/bin/jekyll build --trace 2>&1", user_env: true)
+    pipe("env PATH=$PATH vendor/bundle/ruby/2.0.0/bin/jekyll build --trace 2>&1", user_env: true)
 
     unless $? == 0
       error "Failed to generate site with jekyll."
